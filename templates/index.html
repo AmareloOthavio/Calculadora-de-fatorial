@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Declaração da codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular o fatorial</title>
+</head>
+<body style="color: white; background-color:black; text-align:center; font-family:Arial;">
+    <h1 style="text-align:center"
+    >Digite um número para descobrir seu fatorial</h1>
+    <div style="background-color:SteelBlue; width:30%; border-radius: 10px 10px 10px 10px;
+height: 190px;padding-top:15px; margin-left:37%; margin-top:150px">
+
+            <form action="/resultado" method="post" style="margin-bottom: 30px; padding-bottom:20px"> <!-- Formulário para enviar o número para verificação -->
+                <label for="numero" style="">Número para verificar:</label> <!-- Rótulo do campo de entrada -->
+                <input type="number" id="numero" name="numero" required> <!-- Campo de entrada para o número -->
+                <button type="submit" style="margin-top: 50px; width:100px; height:30px; border-radius:10px 10px 10px 10px; box-shadow: 1px 1px 1px 1px; background-color: rgb(173,216,230)" >Verificar</button> <!-- Botão de envio do formulário -->
+            </form>
+            <div id="resultado" style="font-weight: bold">
+                {% if resultado %} <!-- Verifica se há um resultado a ser exibido -->
+                    {{ resultado }} <!-- Exibe o resultado do fatorial -->
+                {% endif %}
+            </div>
+    </div>
+</body>
+</html>
